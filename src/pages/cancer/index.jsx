@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Button, View, Text} from 'react-native';
+import { COLORS } from '../../styles/colors.js'
 
 function CancerPage({ navigation }) {
   return (
@@ -10,6 +11,7 @@ function CancerPage({ navigation }) {
       <Button
         onPress={() => navigation.navigate('Exame')}
         title="Saiba mais"
+        color={COLORS.orange}
       />
     </View>
   );
