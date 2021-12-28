@@ -1,9 +1,9 @@
 # meu-colo app 
-###Tecnologies
+### Tecnologies
 - react
 - react-native
 - expo  
-###Run the project
+### Run the project
 - #1 install dependencies
   `yarn` or `npm install`   
 - #2 run the project 
