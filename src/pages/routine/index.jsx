@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text} from 'react-native';
+import { Button, View, Text, Alert} from 'react-native';
 
 function RoutinePage({ navigation }) {
   return (
@@ -8,7 +8,7 @@ function RoutinePage({ navigation }) {
           Controle sua rotina de citopatológico
         </Text>
       <Button
-        onPress={() => navigation.navigate('Notifications')}
+        onPress={() => Alert.alert("NOT IMPLEMENTED")}
         title="Enviar"
       />
     </View>
