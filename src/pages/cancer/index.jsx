@@ -1,19 +1,38 @@
-import * as React from 'react';
-import { Button, View, Text} from 'react-native';
-import { COLORS } from '../../styles/colors.js'
+import * as React from "react";
+import { View, Text, ScrollView } from "react-native";
+import CardWithButton from "../../components/CardWithButton/index.jsx";
+import CommonButton from "../../components/CommonButton/index.jsx";
+import styles from "./styles.js";
 
 function CancerPage({ navigation }) {
+  const handlePress = () => {
+    navigation.navigate("Exame");
+  };
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{fontSize: 16}}>
-           Clique em saiba mais para aprender sobre o exame citopatológico (PAPANICOLAU)
+    <ScrollView>
+      <View style={styles.defaultContainer}>
+        <CardWithButton
+          introText={
+            "É um tipo de câncer que acontece na porção inferior do útero, no colo."
+          }
+        />
+        <CardWithButton
+          introText={
+            "É um tipo de câncer que acontece na porção inferior do útero, no colo."
+          }
+        />
+        <CardWithButton
+          introText={
+            "É um tipo de câncer que acontece na porção inferior do útero, no colo."
+          }
+        />
+        <Text style={{ fontSize: 16 }}>
+          Clique em saiba mais para aprender sobre o exame citopatológico
+          (PAPANICOLAU)
         </Text>
-      <Button
-        onPress={() => navigation.navigate('Exame')}
-        title="Saiba mais"
-        color={COLORS.orange}
-      />
-    </View>
+        <CommonButton handlePress={handlePress} buttonText={"SAIBA MAIS"} />
+      </View>
+    </ScrollView>
   );
 }
 
