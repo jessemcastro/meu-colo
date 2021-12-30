@@ -2,9 +2,11 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   defaultContainer: {
+    backgroundColor: '#272D4D',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: '12%',
   },
   title: {
     fontSize: 24,
@@ -13,20 +15,14 @@ const styles = StyleSheet.create({
     paddingLeft: '12%',
     paddingRight: '12%',
   },
-  text: {
-    fontSize: 16,
-    textAlign: 'justify',
-    color: '#ffffff',
-    paddingLeft: '12%',
-    paddingRight: '12%',
-    paddingBottom: '12%',
-  },
-
-  image: {
-    flex: 1,
-    justifyContent: 'center',
+  input: {
+    height: 40,
+    margin: 12,
     width: '100%',
-    height: '100%',
+    borderWidth: 1,
+    padding: 10,
+    borderColor: '#EB5757',
+    color: '#EB5757',
   },
 });
 

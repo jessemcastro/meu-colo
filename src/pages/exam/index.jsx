@@ -19,6 +19,14 @@ function ExamPage({ navigation }) {
           assim seja feita a coleta de material na parte externa interna do
           colo. É importante saber que tal exame não causa dor para a mulher.
         </Text>
+        <Text style={styles.title}>
+          Em qual intervalo de tempo deve realiza-lo?
+        </Text>
+        <Text style={styles.text}>
+          Tal exame deve ser oferecido anualmente às mulheres entre 25 a 64 anos
+          e que já tenham iniciado atividade sexual; e a cada três anos para
+          aquelas com dois resultados.
+        </Text>
       </ImageBackground>
 
       {/* <Button
