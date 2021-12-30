@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
     color: '#EB5757',
     paddingLeft: '12%',
     paddingRight: '12%',
+    paddingBottom: '2%',
   },
   text: {
     fontSize: 16,
-    textAlign: 'justify',
+    textAlign: 'center',
     color: '#ffffff',
     paddingLeft: '12%',
     paddingRight: '12%',
