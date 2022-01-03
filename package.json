@@ -21,7 +21,8 @@
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-snap-carousel": "^3.9.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "react-responsive-carousel": "^3.2.22"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
