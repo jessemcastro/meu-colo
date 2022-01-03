@@ -11,8 +11,6 @@ function ExamPage({ navigation }) {
         source={require('../../assets/images/exam.png')}
         style={styles.image}
       >
-        <Text style={styles.title}>Exame do colo do útero</Text>
-
         <Text style={styles.text}>
           Durante o exame, o profissional de saúde (enfermeiro/médico) insere um
           espéculo na vagina, permitindo que seja visualizado o colo do útero e
