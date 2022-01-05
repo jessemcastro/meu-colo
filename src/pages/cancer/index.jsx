@@ -7,7 +7,7 @@ import styles from './styles.js';
 
 function CancerPage({ navigation }) {
   const handlePress = () => {
-    navigation.navigate('Exame');
+    navigation.navigate('Exame do colo do útero');
   };
   return (
     <ScrollView>
@@ -31,7 +31,10 @@ function CancerPage({ navigation }) {
           Clique em saiba mais para aprender sobre o exame citopatológico
           (PAPANICOLAU)
         </Text>
-        <CommonButton handlePress={handlePress} buttonText={'SAIBA MAIS'} />
+        <CommonButton
+          handlePress={handlePress}
+          buttonText={'EXAME DO COLO DO ÚTERO'}
+        />
       </View>
     </ScrollView>
   );

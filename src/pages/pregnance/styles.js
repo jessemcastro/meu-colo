@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, Platform } from 'react-native';
 const { width: screenWidth } = Dimensions.get('window');
 const styles = StyleSheet.create({
   defaultContainer: {
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
