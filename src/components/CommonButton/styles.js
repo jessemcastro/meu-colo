@@ -1,17 +1,18 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "../../styles/colors";
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../../styles/colors';
 
 const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: COLORS.orange,
     paddingVertical: 10,
     paddingHorizontal: 10,
-    alignItems: "center",
+    alignItems: 'center',
+    width: '100%',
   },
   buttonText: {
     fontSize: 14,
-    color: "white",
-    fontWeight: "400",
+    color: 'white',
+    fontWeight: '400',
   },
 });
 
