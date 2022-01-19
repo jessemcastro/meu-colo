@@ -5,6 +5,9 @@ import CommonButton from '../../components/CommonButton';
 import styles from './styles.js';
 
 function ExamPage({ navigation }) {
+  const handlePress = () => {
+    navigation.navigate('Câncer na gravidez');
+  };
   return (
     <View style={styles.defaultContainer}>
       <ImageBackground
@@ -33,7 +36,7 @@ function ExamPage({ navigation }) {
       /> */}
       <CommonButton
         buttonText={'CÂNCER NA GRAVIDEZ'}
-        handlePress={() => navigation.navigate('Câncer na gravidez')}
+        handlePress={handlePress}
       />
     </View>
   );

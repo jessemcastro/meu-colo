@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { Text, View, Image } from 'react-native';
-import CommonButton from '../CommonButton';
-import styles from './styles';
-import { COLORS } from '../../styles/colors';
+import { Text, View } from 'react-native';
 import Animated, {
   Easing,
-  FlipInEasyX,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { useEffect } from 'react';
+
+/* 
+import CardText from '../CardText';
+import CardImage from '../CardImage';
+import CardSeparator from '../CardSeparator';
+*/
+import CommonButton from '../CommonButton';
+import styles from './styles';
 
 const CardWithButton = ({ introText, completeText }) => {
   const [isShowCompleteText, setIsShowCompleteText] = React.useState(false);

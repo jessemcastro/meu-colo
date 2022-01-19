@@ -37,6 +37,19 @@ const styles = StyleSheet.create({
     width: '80%',
     paddingBottom: 10,
   },
+  cardContainer: {
+    width: '84%',
+    maxHeight: '74%',
+    shadowColor: '#171717',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 30,
+
+    // flex: 1,
+    alignItems: 'center',
+    // justifyContent: 'center',
+    marginBottom: '20%',
+  },
 });
 
 export default styles;
