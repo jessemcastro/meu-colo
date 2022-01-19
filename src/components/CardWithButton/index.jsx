@@ -14,44 +14,66 @@ import { useEffect } from 'react';
 
 const CardWithButton = ({ introText, completeText }) => {
   const [isShowCompleteText, setIsShowCompleteText] = React.useState(false);
-  const position = useSharedValue(300);
+  const textPosition = useSharedValue(-300);
+  const imagePosition = useSharedValue(0);
 
   const handlePress = () => {
     setIsShowCompleteText(!isShowCompleteText);
-    position.value = withTiming(0, {
-      duration: 2000,
-      easing: Easing.bounce,
-    });
+    if (!isShowCompleteText) {
+      textPosition.value = withTiming(0, {
+        duration: 1000,
+        easing: Easing.inOut(Easing.ease),
+      });
+      imagePosition.value = withTiming(-300, {
+        duration: 1000,
+        easing: Easing.inOut(Easing.ease),
+      });
+    } else {
+      textPosition.value = -300;
+      imagePosition.value = withTiming(0, {
+        duration: 1000,
+        easing: Easing.inOut(Easing.ease),
+      });
+    }
   };
 
-  const positionStyle = useAnimatedStyle(() => {
+  const textPositionStyle = useAnimatedStyle(() => {
     return {
       transform: [
         {
-          translateX: position.value,
+          translateY: textPosition.value,
+        },
+      ],
+    };
+  });
+
+  const imagePositionStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          translateY: imagePosition.value,
         },
       ],
     };
   });
 
   return (
-    <View style={styles.mainContainer}>
+    <View style={[styles.mainContainer]}>
       {!isShowCompleteText && (
-        <Image
+        <Animated.Image
           source={require('../../assets/images/cancer.png')}
-          style={{ width: '100%', height: 160 }}
+          style={[styles.cardImage, imagePositionStyle]}
         />
       )}
-      {!isShowCompleteText && <View style={styles.separator} />}
-      <Text style={styles.subtitle}>{introText}</Text>
-      {isShowCompleteText && <View style={styles.separator} />}
       {isShowCompleteText && (
-        <Animated.Text style={[styles.completeText, positionStyle]}>
+        <Animated.Text style={[styles.completeText, textPositionStyle]}>
           {completeText}
         </Animated.Text>
       )}
+      <View style={styles.separator} />
+      <Text style={styles.subtitle}>{introText}</Text>
 
-      <View style={{ width: '80%', paddingBottom: 10 }}>
+      <View style={styles.cardFooter}>
         <CommonButton
           buttonText={!isShowCompleteText ? 'SAIBA MAIS' : 'VOLTAR'}
           handlePress={handlePress}

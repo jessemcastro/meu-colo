@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 10,
   },
+  cardImage: {
+    width: '100%',
+    height: 160,
+  },
+  cardFooter: {
+    width: '80%',
+    paddingBottom: 10,
+  },
 });
 
 export default styles;
