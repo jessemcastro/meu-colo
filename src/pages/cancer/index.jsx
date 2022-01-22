@@ -32,16 +32,8 @@ function CancerPage({ navigation }) {
           }
         />
 
-        <View style={{ backgroundColor: 'white', marginBottom: 6 }}>
-          <Text
-            style={{
-              fontSize: 16,
-              fontWeight: 'bold',
-              margin: 6,
-              textAlign: 'center',
-              color: COLORS.orange,
-            }}
-          >
+        <View style={styles.inviteTextContainer}>
+          <Text style={styles.inviteText}>
             Clique para aprender sobre o exame citopatológico (PAPANICOLAU)
           </Text>
         </View>

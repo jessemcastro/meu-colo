@@ -6,8 +6,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '10%',
-    backgroundColor: COLORS.gray,
+    padding: '8%',
+    backgroundColor: COLORS.background,
+  },
+  inviteTextContainer: {
+    backgroundColor: 'white',
+    marginBottom: 6,
+    width: '100%',
+  },
+  inviteText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    margin: 6,
+    textAlign: 'center',
+    color: COLORS.orange,
   },
 });
 
