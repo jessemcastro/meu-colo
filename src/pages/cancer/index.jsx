@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import CardWithButton from '../../components/CardWithButton/index.jsx';
 import CommonButton from '../../components/CommonButton/index.jsx';
+import { COLORS } from '../../styles/colors.js';
 
 import styles from './styles.js';
 
@@ -30,9 +31,20 @@ function CancerPage({ navigation }) {
             'No Brasil, o método utilizado para o rastreamento desse tipo de câncer e de suas lesões iniciais é o exame citológico ou Papanicolau, conhecido popularmente como exame de prevenção. Ele também contribui no reconhecimento de condições infecciosas e/ou inflamatórias da região vaginal.'
           }
         />
-        <Text style={{ fontSize: 16, margin: 6, textAlign: 'center' }}>
-          Clique para aprender sobre o exame citopatológico (PAPANICOLAU)
-        </Text>
+
+        <View style={{ backgroundColor: 'white', marginBottom: 6 }}>
+          <Text
+            style={{
+              fontSize: 16,
+              fontWeight: 'bold',
+              margin: 6,
+              textAlign: 'center',
+              color: COLORS.orange,
+            }}
+          >
+            Clique para aprender sobre o exame citopatológico (PAPANICOLAU)
+          </Text>
+        </View>
         <CommonButton handlePress={handlePress} buttonText={'CONTINUAR'} />
       </View>
     </ScrollView>
