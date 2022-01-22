@@ -5,11 +5,13 @@ import Animated, {
   Easing,
 } from 'react-native-reanimated';
 import { View, Button } from 'react-native';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import CardImage from '../../components/CardImage';
 
 function AnimatedStyleUpdateExample() {
   const opacity = useSharedValue(1);
   const viewPosition = useSharedValue(500);
+  const [imgPos, setImgPos] = useState(0);
 
   useEffect(() => {
     viewPosition.value = withTiming(0, {
@@ -50,6 +52,10 @@ function AnimatedStyleUpdateExample() {
         backgroundColor: '#ddd',
       }}
     >
+      <CardImage
+        image={require('../../assets/images/cancer.png')}
+        imgPositionValue={imgPos}
+      />
       <Animated.View
         style={[
           { width: 100, height: 80, backgroundColor: 'black', margin: 30 },
@@ -61,6 +67,7 @@ function AnimatedStyleUpdateExample() {
         title='toggle'
         onPress={() => {
           opacity.value = 0;
+          setImgPos(300);
         }}
       />
     </View>

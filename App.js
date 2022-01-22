@@ -12,7 +12,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName='Home'>
+      <Drawer.Navigator initialRouteName='Câncer de colo do útero'>
         <Drawer.Screen name='Home' component={AnimatedStyleUpdateExample} />
         <Drawer.Screen name='Câncer de colo do útero' component={CancerPage} />
         <Drawer.Screen name='Exame do colo do útero' component={ExamPage} />

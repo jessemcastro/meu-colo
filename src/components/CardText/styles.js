@@ -1,14 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { COLORS } from '../../styles/colors';
 
 const styles = StyleSheet.create({
-  text: {
-    padding: 5,
+  completeText: {
+    margin: 10,
     fontSize: 16,
-    textAlign: 'justify',
-    marginLeft: '5%',
-    marginRight: '5%',
-    marginBottom: '10%',
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  cardText: {
+    position: 'absolute',
+    marginTop: 20,
+    width: '100%',
+    backgroundColor: '#ffe6e6',
   },
 });
 

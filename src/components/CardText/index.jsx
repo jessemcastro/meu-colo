@@ -1,20 +1,39 @@
-import * as React from 'react';
-
-import { View, Text } from 'react-native-web';
+import React, { useEffect } from 'react';
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 
 import styles from './styles';
 
-const CardText = () => {
+const CardText = ({ completeText, textPos }) => {
+  const textPosition = useSharedValue(0);
+
+  const textPositionStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          translateX: textPosition.value,
+        },
+      ],
+    };
+  });
+
+  useEffect(() => {
+    textPosition.value = withTiming(textPos, {
+      duration: 1000,
+      easing: Easing.inOut(Easing.ease),
+    });
+  }, [textPos]);
+
   return (
-    <View style={styles.text}>
-      <Text>
-        O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está
-        reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de
-        Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo
-        em sua forma exata original, acompanhada das versões para o inglês da
-        tradução feita por H. Rackham em 1914.
-      </Text>
-    </View>
+    <Animated.View style={[styles.cardText, textPositionStyle]}>
+      <Animated.Text style={[styles.completeText]}>
+        {completeText}
+      </Animated.Text>
+    </Animated.View>
   );
 };
 

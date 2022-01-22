@@ -1,78 +1,37 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Text, View } from 'react-native';
-import Animated, {
-  Easing,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
-
-/* 
-import CardText from '../CardText';
-import CardImage from '../CardImage';
-import CardSeparator from '../CardSeparator';
-*/
 import CommonButton from '../CommonButton';
+import CardImage from '../CardImage';
+import CardText from '../CardText';
 import styles from './styles';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const CardWithButton = ({ introText, completeText }) => {
   const [isShowCompleteText, setIsShowCompleteText] = React.useState(false);
-  const textPosition = useSharedValue(-300);
-  const imagePosition = useSharedValue(0);
+  const [imgPos, setImgPos] = useState(0);
+  const [textPos, setTextPos] = useState(500);
 
   const handlePress = () => {
     setIsShowCompleteText(!isShowCompleteText);
     if (!isShowCompleteText) {
-      textPosition.value = withTiming(0, {
-        duration: 1000,
-        easing: Easing.inOut(Easing.ease),
-      });
-      imagePosition.value = withTiming(-300, {
-        duration: 1000,
-        easing: Easing.inOut(Easing.ease),
-      });
+      setImgPos(-500);
+      setTextPos(0);
     } else {
-      textPosition.value = -300;
-      imagePosition.value = withTiming(0, {
-        duration: 1000,
-        easing: Easing.inOut(Easing.ease),
-      });
+      setTextPos(500);
+      setImgPos(0);
     }
   };
 
-  const textPositionStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {
-          translateY: textPosition.value,
-        },
-      ],
-    };
-  });
-
-  const imagePositionStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {
-          translateY: imagePosition.value,
-        },
-      ],
-    };
-  });
-
   return (
-    <View style={[styles.mainContainer]}>
-      {!isShowCompleteText && (
-        <Animated.Image
-          source={require('../../assets/images/cancer.png')}
-          style={[styles.cardImage, imagePositionStyle]}
+    <View style={[styles.cardContainer]}>
+      <ScrollView style={{ width: '100%', maxHeight: 200 }}>
+        <CardImage
+          image={require('../../assets/images/cancer.png')}
+          imgPos={imgPos}
         />
-      )}
-      {isShowCompleteText && (
-        <Animated.Text style={[styles.completeText, textPositionStyle]}>
-          {completeText}
-        </Animated.Text>
-      )}
+        <CardText completeText={completeText} textPos={textPos} />
+      </ScrollView>
+
       <View style={styles.separator} />
       <Text style={styles.subtitle}>{introText}</Text>
 

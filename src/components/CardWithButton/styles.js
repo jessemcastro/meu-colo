@@ -12,19 +12,22 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   cardContainer: {
-    width: '84%',
+    width: '100%',
     maxHeight: '74%',
     shadowColor: '#171717',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.5,
     shadowRadius: 30,
+    backgroundColor: COLORS.white,
     // flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
     marginBottom: '20%',
   },
   subtitle: {
-    margin: 10,
+    marginVertical: 20,
+    paddingHorizontal: 24,
+    textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
     color: COLORS.orange,
@@ -39,15 +42,15 @@ const styles = StyleSheet.create({
     borderBottomColor: COLORS.orange,
     width: '30%',
     borderRadius: 5,
-    marginVertical: 10,
+    marginTop: 10,
   },
   cardImage: {
     width: '100%',
-    height: 160,
+    height: 200,
   },
   cardFooter: {
     width: '80%',
-    paddingBottom: 10,
+    paddingVertical: 20,
   },
 });
 
