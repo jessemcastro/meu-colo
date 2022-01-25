@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   cardText: {
-    position: 'absolute',
     marginTop: 20,
     width: '100%',
     backgroundColor: '#ffe6e6',

@@ -8,11 +8,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     alignItems: 'center',
     width: '100%',
+    height: 50,
+    justifyContent: 'center',
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'white',
-    fontWeight: '400',
   },
 });
 

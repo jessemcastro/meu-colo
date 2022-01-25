@@ -1,11 +1,17 @@
-import * as React from 'react';
-import { Button, View, Text, Alert, TextInput } from 'react-native';
-import { SafeAreaView } from 'react-native-web';
+import React, { useState } from 'react';
+import { View, Text, Alert, TextInput } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+
 import CommonButton from '../../components/CommonButton';
+import { COLORS } from '../../styles/colors';
 
 import styles from './styles';
 
 function RoutinePage({ navigation }) {
+  const handlePress = () => {
+    Alert.alert('Ops', 'Ainda estamos trabalhando nisso!');
+  };
+
   return (
     <View style={styles.defaultContainer}>
       <Text style={styles.title}>
@@ -14,28 +20,25 @@ function RoutinePage({ navigation }) {
 
       <TextInput
         style={styles.input}
-        autoFocus
-        // onChangeText={onChangeNumber}
-        // value={email}
-        placeholder="Digite seu endereço de email:"
-        keyboardType="email-address"
-      ></TextInput>
+        placeholder='Nome'
+        keyboardType='default'
+        placeholderTextColor={COLORS.white}
+      />
       <TextInput
         style={styles.input}
-        // onChangeText={onChangeNumber}
-        // value={text}
-        placeholder="Data do último exame"
-        keyboardType="numeric"
-        maxLength={10}
-      ></TextInput>
+        placeholder='Email'
+        keyboardType='email-address'
+        placeholderTextColor={COLORS.white}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder='Data do último exame'
+        placeholderTextColor={COLORS.white}
+      />
 
-      {/* <Button
-        onPress={() => Alert.alert("NOT IMPLEMENTED")}
-        title="Enviar"
-      /> */}
       <CommonButton
         buttonText={'Enviar'}
-        handlePress={Alert.alert('NOT IMPLEMENTED')}
+        handlePress={handlePress}
       ></CommonButton>
     </View>
   );

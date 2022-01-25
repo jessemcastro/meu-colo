@@ -8,28 +8,9 @@ import Animated, {
 
 import styles from './styles';
 
-const CardText = ({ completeText, textPos }) => {
-  const textPosition = useSharedValue(0);
-
-  const textPositionStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {
-          translateX: textPosition.value,
-        },
-      ],
-    };
-  });
-
-  useEffect(() => {
-    textPosition.value = withTiming(textPos, {
-      duration: 1000,
-      easing: Easing.inOut(Easing.ease),
-    });
-  }, [textPos]);
-
+const CardText = ({ completeText }) => {
   return (
-    <Animated.View style={[styles.cardText, textPositionStyle]}>
+    <Animated.View style={[styles.cardText]}>
       <Animated.Text style={[styles.completeText]}>
         {completeText}
       </Animated.Text>
