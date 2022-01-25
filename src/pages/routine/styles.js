@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../styles/colors';
 
 const styles = StyleSheet.create({
   defaultContainer: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderColor: '#EB5757',
-    color: '#EB5757',
+    color: COLORS.white,
   },
 });
 

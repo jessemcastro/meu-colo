@@ -1,18 +1,20 @@
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import React from 'react';
+
+import { View } from 'react-native';
+import styles from './styles';
+import CommonButton from '../../components/CommonButton';
+import CardWithButton from '../../components/CardWithButton';
 
 function PregnancePage({ navigation }) {
+  const handlePress = () => {
+    navigation.navigate('Rotina');
+  };
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ fontSize: 16 }}>
-        Clique em saiba mais para acessar o meu citopatológico em dia
-      </Text>
-      <Button
-        onPress={() => navigation.navigate('Rotina')}
-        title="saiba mais"
-      />
+    <View style={styles.defaultContainer}>
+      <CardWithButton />
+
+      <CommonButton buttonText={'ROTINA'} handlePress={handlePress} />
     </View>
   );
 }
-
 export default PregnancePage;

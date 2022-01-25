@@ -5,12 +5,16 @@ import CommonButton from '../../components/CommonButton';
 import styles from './styles.js';
 
 function ExamPage({ navigation }) {
+  const handlePress = () => {
+    navigation.navigate('Câncer na gravidez');
+  };
   return (
     <View style={styles.defaultContainer}>
       <ImageBackground
         source={require('../../assets/images/exam.png')}
         style={styles.image}
       >
+        <Text style={styles.title}>Exame citopatológico (Papanicolau)</Text>
         <Text style={styles.text}>
           Durante o exame, o profissional de saúde (enfermeiro/médico) insere um
           espéculo na vagina, permitindo que seja visualizado o colo do útero e
@@ -33,7 +37,7 @@ function ExamPage({ navigation }) {
       /> */}
       <CommonButton
         buttonText={'CÂNCER NA GRAVIDEZ'}
-        handlePress={() => navigation.navigate('Câncer na gravidez')}
+        handlePress={handlePress}
       />
     </View>
   );

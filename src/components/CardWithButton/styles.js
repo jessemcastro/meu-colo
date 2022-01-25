@@ -2,24 +2,24 @@ import { StyleSheet } from 'react-native';
 import { COLORS } from '../../styles/colors';
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  cardContainer: {
     width: '100%',
-    marginBottom: 20,
-    borderColor: COLORS.gray,
-    borderWidth: 2,
+    maxHeight: '74%',
     backgroundColor: COLORS.white,
+    alignItems: 'center',
+    marginBottom: '20%',
   },
   subtitle: {
-    margin: 10,
-    fontSize: 16,
-    fontWeight: '600',
+    marginVertical: 4,
+    paddingHorizontal: 12,
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
     color: COLORS.orange,
   },
   completeText: {
     margin: 10,
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '600',
   },
   separator: {
@@ -27,7 +27,11 @@ const styles = StyleSheet.create({
     borderBottomColor: COLORS.orange,
     width: '30%',
     borderRadius: 5,
-    marginVertical: 10,
+    marginTop: 2,
+  },
+  cardFooter: {
+    width: '80%',
+    paddingVertical: 20,
   },
 });
 
