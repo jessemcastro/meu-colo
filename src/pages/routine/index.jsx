@@ -1,16 +1,43 @@
-import * as React from 'react';
-import { Button, View, Text, Alert} from 'react-native';
+import React from 'react';
+import { View, Text, Alert, TextInput } from 'react-native';
+
+import CommonButton from '../../components/CommonButton';
+import styles from './styles';
+import { COLORS } from '../../styles/colors';
 
 function RoutinePage({ navigation }) {
+  const handlePress = () => {
+    Alert.alert('Ops', 'Ainda estamos trabalhando nisso!');
+  };
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{fontSize: 16}}>
-          Controle sua rotina de citopatológico
-        </Text>
-      <Button
-        onPress={() => Alert.alert("NOT IMPLEMENTED")}
-        title="Enviar"
+    <View style={styles.defaultContainer}>
+      <Text style={styles.title}>
+        Controle sua rotina de exame citopatológico
+      </Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder='Nome'
+        keyboardType='default'
+        placeholderTextColor={COLORS.white}
       />
+      <TextInput
+        style={styles.input}
+        placeholder='Email'
+        keyboardType='email-address'
+        placeholderTextColor={COLORS.white}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder='Data do último exame'
+        placeholderTextColor={COLORS.white}
+      />
+
+      <CommonButton
+        buttonText={'Enviar'}
+        handlePress={handlePress}
+      ></CommonButton>
     </View>
   );
 }

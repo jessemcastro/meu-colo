@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "meu-colo",
+    "name": "Meu Colo",
     "slug": "meu-colo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,21 +8,20 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#d1ccfe"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jmcdev.meucolo"
     },
     "android": {
+      "package": "com.jmcdev.meucolo",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/adaptive-icon.png"
       }
     },
     "web": {
