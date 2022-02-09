@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, Alert, TextInput } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
 
 import CommonButton from '../../components/CommonButton';
-import { COLORS } from '../../styles/colors';
-
 import styles from './styles';
+import { COLORS } from '../../styles/colors';
 
 function RoutinePage({ navigation }) {
   const handlePress = () => {

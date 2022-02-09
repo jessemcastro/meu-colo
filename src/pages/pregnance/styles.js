@@ -1,11 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../styles/colors';
 const styles = StyleSheet.create({
   defaultContainer: {
-    // backgroundColor: 'red',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '12%',
+    backgroundColor: COLORS.background,
+    paddingHorizontal: '8%',
   },
 });
 

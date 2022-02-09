@@ -26,8 +26,7 @@ Tal exame deve ser oferecido anualmente às mulheres entre 25 a 64 anos e que j�
 
 ### 3.1: Pode realizar esse exame mesmo estando grávida?
 
-Gestantes têm o mesmo risco que não gestantes de apresentarem câncer do colo do útero ou suas lesões iniciais. O achado dessas alterações durante a gravidez reflete a oportunidade do rastreamento durante o pré-natal.
-Nesse caso, o exame pode ser realizado em qualquer período da gestação, de pre¬ferência até o sétimo mês.
+Gestantes têm o mesmo risco que não gestantes de apresentarem câncer do colo do útero ou suas lesões iniciais. O achado dessas alterações durante a gravidez reflete a oportunidade do rastreamento durante o pré-natal. Nesse caso, o exame pode ser realizado em qualquer período da gestação, de pre¬ferência até o sétimo mês.
 
 ### 3.2: Pode causar algum risco à gestação?
 

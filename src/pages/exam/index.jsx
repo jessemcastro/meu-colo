@@ -18,7 +18,7 @@ function ExamPage({ navigation }) {
         <Text style={styles.text}>
           Durante o exame, o profissional de saúde (enfermeiro/médico) insere um
           espéculo na vagina, permitindo que seja visualizado o colo do útero e
-          assim seja feita a coleta de material na parte externa interna do
+          assim seja feita a coleta de material na parte externa e interna do
           colo. É importante saber que tal exame não causa dor para a mulher.
         </Text>
         <Text style={styles.title}>
@@ -27,7 +27,7 @@ function ExamPage({ navigation }) {
         <Text style={styles.text}>
           Tal exame deve ser oferecido anualmente às mulheres entre 25 a 64 anos
           e que já tenham iniciado atividade sexual; e a cada três anos para
-          aquelas com dois resultados.
+          aquelas com dois resultados negativos.
         </Text>
       </ImageBackground>
 
