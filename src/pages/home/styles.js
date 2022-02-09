@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ddd',
     height: '100%',
     backgroundColor: COLORS.background,
-    padding: 10,
+    padding: 12,
   },
   text: {
     fontSize: 24,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   image: {
-    height: 350,
+    height: 320,
     width: '100%',
     borderWidth: 0,
     borderColor: COLORS.white,
