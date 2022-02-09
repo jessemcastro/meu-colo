@@ -3,8 +3,8 @@ import { COLORS } from '../../styles/colors';
 
 const styles = StyleSheet.create({
   defaultContainer: {
-    padding: '8%',
     backgroundColor: COLORS.background,
+    paddingHorizontal: '8%',
   },
   inviteTextContainer: {
     marginBottom: 6,
