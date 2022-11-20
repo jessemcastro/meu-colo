@@ -7,7 +7,7 @@ import { COLORS } from '../../styles/colors';
 
 function RoutinePage({ navigation }) {
   const handlePress = () => {
-    Alert.alert('Ops', 'Ainda estamos trabalhando nisso!');
+    Alert.alert('Ops', 'Ainda estamos trabalhando nisso. Em breve novidades');
   };
 
   return (
